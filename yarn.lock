@@ -22,9 +22,30 @@
   resolved "https://registry.npmmirror.com/@babel/compat-data/-/compat-data-7.17.10.tgz"
   integrity sha512-GZt/TCsG70Ms19gfZO1tM4CVnXsPgEPBCpJu+Qz3L0LUDsY5nZqFZglIoPC1kIYOtNBZlrnFT+klg12vFGZXrw==
 
-"@babel/core@^7.11.6", "@babel/core@^7.12.3", "@babel/core@^7.17.10":
+"@babel/core@^7.11.6", "@babel/core@^7.12.3":
   version "7.17.10"
   resolved "https://registry.npmmirror.com/@babel/core/-/core-7.17.10.tgz"
+  integrity sha512-liKoppandF3ZcBnIYFjfSDHZLKdLHGJRkoWtG8zQyGJBQfIYobpnVGI5+pLBNtS6psFLDzyq8+h5HiVljW9PNA==
+  dependencies:
+    "@ampproject/remapping" "^2.1.0"
+    "@babel/code-frame" "^7.16.7"
+    "@babel/generator" "^7.17.10"
+    "@babel/helper-compilation-targets" "^7.17.10"
+    "@babel/helper-module-transforms" "^7.17.7"
+    "@babel/helpers" "^7.17.9"
+    "@babel/parser" "^7.17.10"
+    "@babel/template" "^7.16.7"
+    "@babel/traverse" "^7.17.10"
+    "@babel/types" "^7.17.10"
+    convert-source-map "^1.7.0"
+    debug "^4.1.0"
+    gensync "^1.0.0-beta.2"
+    json5 "^2.2.1"
+    semver "^6.3.0"
+
+"@babel/core@^7.17.10":
+  version "7.17.10"
+  resolved "https://registry.npmmirror.com/@babel/core/-/core-7.17.10.tgz#74ef0fbf56b7dfc3f198fc2d927f4f03e12f4b05"
   integrity sha512-liKoppandF3ZcBnIYFjfSDHZLKdLHGJRkoWtG8zQyGJBQfIYobpnVGI5+pLBNtS6psFLDzyq8+h5HiVljW9PNA==
   dependencies:
     "@ampproject/remapping" "^2.1.0"
@@ -780,7 +801,7 @@
 
 "@babel/preset-env@^7.17.10":
   version "7.17.10"
-  resolved "https://registry.npmmirror.com/@babel/preset-env/-/preset-env-7.17.10.tgz"
+  resolved "https://registry.npmmirror.com/@babel/preset-env/-/preset-env-7.17.10.tgz#a81b093669e3eb6541bb81a23173c5963c5de69c"
   integrity sha512-YNgyBHZQpeoBSRBg0xixsZzfT58Ze1iZrajvv0lJc70qDDGuGfonEnMGfWeSY0mQ3JTuCWFbMkzFRVafOyJx4g==
   dependencies:
     "@babel/compat-data" "^7.17.10"
@@ -1109,10 +1130,43 @@
     slash "^3.0.0"
     write-file-atomic "^4.0.1"
 
+"@jest/transform@^28.1.0":
+  version "28.1.0"
+  resolved "https://registry.npmmirror.com/@jest/transform/-/transform-28.1.0.tgz#224a3c9ba4cc98e2ff996c0a89a2d59db15c74ce"
+  integrity sha512-omy2xe5WxlAfqmsTjTPxw+iXRTRnf+NtX0ToG+4S0tABeb4KsKmPUHq5UBuwunHg3tJRwgEQhEp0M/8oiatLEA==
+  dependencies:
+    "@babel/core" "^7.11.6"
+    "@jest/types" "^28.1.0"
+    "@jridgewell/trace-mapping" "^0.3.7"
+    babel-plugin-istanbul "^6.1.1"
+    chalk "^4.0.0"
+    convert-source-map "^1.4.0"
+    fast-json-stable-stringify "^2.0.0"
+    graceful-fs "^4.2.9"
+    jest-haste-map "^28.1.0"
+    jest-regex-util "^28.0.2"
+    jest-util "^28.1.0"
+    micromatch "^4.0.4"
+    pirates "^4.0.4"
+    slash "^3.0.0"
+    write-file-atomic "^4.0.1"
+
 "@jest/types@^28.0.2":
   version "28.0.2"
   resolved "https://registry.npmmirror.com/@jest/types/-/types-28.0.2.tgz"
   integrity sha512-hi3jUdm9iht7I2yrV5C4s3ucCJHUP8Eh3W6rQ1s4n/Qw9rQgsda4eqCt+r3BKRi7klVmZfQlMx1nGlzNMP2d8A==
+  dependencies:
+    "@jest/schemas" "^28.0.2"
+    "@types/istanbul-lib-coverage" "^2.0.0"
+    "@types/istanbul-reports" "^3.0.0"
+    "@types/node" "*"
+    "@types/yargs" "^17.0.8"
+    chalk "^4.0.0"
+
+"@jest/types@^28.1.0":
+  version "28.1.0"
+  resolved "https://registry.npmmirror.com/@jest/types/-/types-28.1.0.tgz#508327a89976cbf9bd3e1cc74641a29fd7dfd519"
+  integrity sha512-xmEggMPr317MIOjjDoZ4ejCSr9Lpbt/u34+dvc99t7DS8YirW5rwZEhzKPC2BMUFkUhI48qs6qLUSGw5FuL0GA==
   dependencies:
     "@jest/schemas" "^28.0.2"
     "@types/istanbul-lib-coverage" "^2.0.0"
@@ -1317,6 +1371,19 @@ babel-jest@^28.0.3:
   integrity sha512-S0ADyYdcrt5fp9YldRYWCUHdk1BKt9AkvBkLWBoNAEV9NoWZPIj5+MYhPcGgTS65mfv3a+Ymf2UqgWoAVd41cA==
   dependencies:
     "@jest/transform" "^28.0.3"
+    "@types/babel__core" "^7.1.14"
+    babel-plugin-istanbul "^6.1.1"
+    babel-preset-jest "^28.0.2"
+    chalk "^4.0.0"
+    graceful-fs "^4.2.9"
+    slash "^3.0.0"
+
+babel-jest@^28.1.0:
+  version "28.1.0"
+  resolved "https://registry.npmmirror.com/babel-jest/-/babel-jest-28.1.0.tgz#95a67f8e2e7c0042e7b3ad3951b8af41a533b5ea"
+  integrity sha512-zNKk0yhDZ6QUwfxh9k07GII6siNGMJWVUU49gmFj5gfdqDKLqa2RArXOF2CODp4Dr7dLxN2cvAV+667dGJ4b4w==
+  dependencies:
+    "@jest/transform" "^28.1.0"
     "@types/babel__core" "^7.1.14"
     babel-plugin-istanbul "^6.1.1"
     babel-preset-jest "^28.0.2"
@@ -2090,6 +2157,25 @@ jest-haste-map@^28.0.2:
   optionalDependencies:
     fsevents "^2.3.2"
 
+jest-haste-map@^28.1.0:
+  version "28.1.0"
+  resolved "https://registry.npmmirror.com/jest-haste-map/-/jest-haste-map-28.1.0.tgz#6c1ee2daf1c20a3e03dbd8e5b35c4d73d2349cf0"
+  integrity sha512-xyZ9sXV8PtKi6NCrJlmq53PyNVHzxmcfXNVvIRHpHmh1j/HChC4pwKgyjj7Z9us19JMw8PpQTJsFWOsIfT93Dw==
+  dependencies:
+    "@jest/types" "^28.1.0"
+    "@types/graceful-fs" "^4.1.3"
+    "@types/node" "*"
+    anymatch "^3.0.3"
+    fb-watchman "^2.0.0"
+    graceful-fs "^4.2.9"
+    jest-regex-util "^28.0.2"
+    jest-util "^28.1.0"
+    jest-worker "^28.1.0"
+    micromatch "^4.0.4"
+    walker "^1.0.7"
+  optionalDependencies:
+    fsevents "^2.3.2"
+
 jest-leak-detector@^28.0.2:
   version "28.0.2"
   resolved "https://registry.npmmirror.com/jest-leak-detector/-/jest-leak-detector-28.0.2.tgz"
@@ -2270,6 +2356,18 @@ jest-util@^28.0.2:
     graceful-fs "^4.2.9"
     picomatch "^2.2.3"
 
+jest-util@^28.1.0:
+  version "28.1.0"
+  resolved "https://registry.npmmirror.com/jest-util/-/jest-util-28.1.0.tgz#d54eb83ad77e1dd441408738c5a5043642823be5"
+  integrity sha512-qYdCKD77k4Hwkose2YBEqQk7PzUf/NSE+rutzceduFveQREeH6b+89Dc9+wjX9dAwHcgdx4yedGA3FQlU/qCTA==
+  dependencies:
+    "@jest/types" "^28.1.0"
+    "@types/node" "*"
+    chalk "^4.0.0"
+    ci-info "^3.2.0"
+    graceful-fs "^4.2.9"
+    picomatch "^2.2.3"
+
 jest-validate@^28.0.2:
   version "28.0.2"
   resolved "https://registry.npmmirror.com/jest-validate/-/jest-validate-28.0.2.tgz"
@@ -2300,6 +2398,15 @@ jest-worker@^28.0.2:
   version "28.0.2"
   resolved "https://registry.npmmirror.com/jest-worker/-/jest-worker-28.0.2.tgz"
   integrity sha512-pijNxfjxT0tGAx+8+OzZ+eayVPCwy/rsZFhebmC0F4YnXu1EHPEPxg7utL3m5uX3EaFH1/jwDxGa1EbjJCST2g==
+  dependencies:
+    "@types/node" "*"
+    merge-stream "^2.0.0"
+    supports-color "^8.0.0"
+
+jest-worker@^28.1.0:
+  version "28.1.0"
+  resolved "https://registry.npmmirror.com/jest-worker/-/jest-worker-28.1.0.tgz#ced54757a035e87591e1208253a6e3aac1a855e5"
+  integrity sha512-ZHwM6mNwaWBR52Snff8ZvsCTqQsvhCxP/bT1I6T6DAnb6ygkshsyLQIMxFwHpYxht0HOoqt23JlC01viI7T03A==
   dependencies:
     "@types/node" "*"
     merge-stream "^2.0.0"

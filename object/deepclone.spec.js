@@ -1,4 +1,4 @@
-import { _deepClone } from './deepclone.mjs';
+import { _deepClone } from './deepclone.js';
 
 test('deep clone', () => {
   let person = {
