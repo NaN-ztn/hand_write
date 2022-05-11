@@ -65,11 +65,11 @@ let copyKenNaNa = JSON.parse(JSON.stringify(kenNaNa));
 /**
  Ken {age: "18", run: ƒ, contructor: ƒ}
  * */
-console.log(copyKenNaNa.constructor); // ƒ Object() { [native code]}
-console.log(copyKenNaNa.age); // undefined
-console.log(copyKenNaNa.run()); // is not function
-console.log(copyKenNaNa.walk()); // is not function
-console.log(copyKenNaNa.toString()); // "[object Object]"
+// console.log(copyKenNaNa.constructor); // ƒ Object() { [native code]}
+// console.log(copyKenNaNa.age); // undefined
+// console.log(copyKenNaNa.run()); // is not function
+// console.log(copyKenNaNa.walk()); // is not function
+// console.log(copyKenNaNa.toString()); // "[object Object]"
 
 // 4.date 对象转变为 date 字符串
 var date = new Date();
@@ -110,7 +110,7 @@ export function deepClone(object) {
     if (object.hasOwnProperty(key)) {
       // 若是引用类型则进行递归处理
       // 基础类型则直接赋值
-      newObject[key] = typeof object[key] === 'object' ? _deepClone(object[key]) : object[key];
+      newObject[key] = typeof object[key] === 'object' ? deepClone(object[key]) : object[key];
     }
   }
 
