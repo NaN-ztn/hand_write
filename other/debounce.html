@@ -10,12 +10,17 @@
   <body>
     <button id="debounce">debounce</button>
   </body>
-  <script>
+  <script type="module">
+    import { debounce } from './debounce.js';
     function add() {
       console.log(111);
     }
-    document.querySelector('#debounce').onclick = _.debounce(add, 1000, {
-      maxWait: 500,
-    });
+    // document.querySelector('#debounce').onclick = _.debounce(add, 1000, {
+    //   trailing: true,
+    //   leading: true,
+    //   maxWait: 500,
+    // });
+
+    document.querySelector('#debounce').onclick = debounce(add, 1000);
   </script>
 </html>
